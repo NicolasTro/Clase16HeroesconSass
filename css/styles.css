@@ -1,0 +1,635 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Roboto&display=swap");
+
+/*  GENERAL */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML */
+
+html {
+  width: 1500px;
+}
+
+main {
+  border-color: greenyellow;
+}
+/*  HEADER */
+
+.contenedor-titulo1 {
+  left: 20px;
+
+  top: 0px;
+}
+.descuentosSpan {
+  left: 20px;
+  position: relative;
+}
+
+header {
+  background-color: #1cd1b0;
+}
+
+h1 {
+  align-items: center;
+
+  display: flex;
+  height: 101px;
+  position: sticky;
+  top: 0px;
+}
+
+.tituloTres {
+  background-color: #001d2d;
+  color: white;
+  position: sticky;
+  top: 100px;
+  z-index: 1;
+  box-shadow: 1px 10px 5px #4b4b4b;
+}
+
+.tituloTres li {
+  margin: 0 20px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.tituloTres ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+.tituloFondo {
+  background-color: #00669f;
+  color: white;
+  height: 101px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+/* BODY */
+
+a:link {
+  text-decoration: none;
+}
+
+.tituloFondo:hover,
+.ayuda1:hover {
+  background-color: red;
+  transition: all 0.5s;
+}
+.contenedorCartas {
+  position: relative;
+}
+input:checked ~ .contenedorAux {
+  opacity: 100%;
+}
+
+.ayuda {
+  height: 70px;
+  left: 1400px;
+  position: sticky;
+  top: 1200px;
+  width: 70px;
+  z-index: 1;
+}
+
+.etiquetaSegundaPagina:hover {
+  background-color: #001d2d;
+  color: white;
+}
+.etiquetaSegundaPagina {
+  align-items: center;
+  background-color: #00669f;
+  border-radius: 100%;
+  color: #fff9f9;
+  display: flex;
+  font-size: 60px;
+  height: 70px;
+  justify-content: center;
+  width: 70px;
+  z-index: 1;
+}
+
+.contenedorAgregar {
+  opacity: 0%;
+  height: 1px;
+}
+
+.carta {
+  z-index: 1;
+}
+
+.carta:hover {
+  transition: all 1s;
+  transform: scale(1.2);
+}
+
+.imgRedonda:hover {
+  transition: all 1s;
+  transform: scale(2);
+}
+
+.contenedorAgregar {
+  bottom: 1200px;
+  position: relative;
+}
+
+#segundaPagina:checked ~ .contenedorCartas {
+  transform: translateX(-1500px);
+  transition: all 0.5s;
+}
+#segundaPagina:checked ~ .contenedorAgregar {
+  opacity: 100%;
+  transform: translateX(1500px);
+  transition: all 2.5s;
+}
+
+#segundaPagina {
+  visibility: hidden;
+}
+.contenedorAgregar {
+  position: relative;
+  right: 1500px;
+}
+.carta {
+  background-color: #f3f3f3;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 1px 10px 5px #4b4b4b;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.boton1:hover {
+  background-color: #001d2d;
+  color: white;
+}
+.contenedorCorazon {
+  left: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.contenedorCartas {
+  position: relative;
+  bottom: 110px;
+  align-items: center;
+  display: flex;
+  height: 1200px;
+  justify-content: space-around;
+  border-color: red;
+}
+
+.espaciador {
+  height: 90px;
+  width: 330px;
+}
+.bloqueContenido {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.imagen-top {
+  border: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 350px;
+}
+
+.tUno,
+.tDos,
+.tTres,
+.tCuatro,
+.rCuatro {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tUno {
+  background-image: url(../img/Batman1.png);
+}
+
+.rUno {
+  background-image: url(../img/Bat1.png);
+}
+.tDos {
+  background-image: url(../img/Fondo\ Maravilla.png);
+}
+
+.rDos {
+  background-image: url(../img/Mujer\ maravilla.png);
+}
+
+.tTres {
+  background-image: url(../img/Fondo\ superman.png);
+}
+
+.rTres {
+  background-image: url(../img/Foto\ superman.png);
+}
+
+.tCuatro {
+  background-image: url(../img/Harley.png);
+}
+
+.rCuatro {
+  background-image: url(../img/Har1.png);
+}
+
+.imgRedonda {
+  align-self: center;
+  background-size: contain;
+  height: 118px;
+  position: absolute;
+  top: 140px;
+  width: 120px;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tituloImg {
+  text-align: center;
+}
+.descripcion {
+  height: 200px;
+  position: relative;
+  top: 10px;
+  width: 320px;
+}
+input {
+  background-color: #00669f;
+  color: #f3f3f3;
+  height: 48.52px;
+  margin: 20px;
+  width: 128.78px;
+}
+
+/* PAGINA AGREGAR*/
+
+.tituloContenedor h2,
+h3 {
+  color: white;
+  text-align: center;
+}
+.tituloContenedor h2 {
+  font-size: 60px;
+}
+.tituloContenedor h3 {
+  font-size: 30px;
+}
+
+.contenedorAgregar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.contenedorAux {
+  background-color: #00669f;
+  border-radius: 49px;
+  display: flex;
+  flex-direction: column;
+  height: 950px;
+  position: relative;
+  width: 1200px;
+}
+.bloqueIzquierdo {
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 750px;
+  width: 400px;
+}
+.bloqueFecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+
+.bloqueFecha input {
+  position: relative;
+  right: 20px;
+}
+.nombre {
+  position: relative;
+  right: 160px;
+  top: 20px;
+}
+
+.bloqueIzquierdo input[type="text"]:valid {
+  background-color: #aff9fe;
+}
+
+.bloqueIzquierdo label {
+  color: white;
+  font-size: 20px;
+}
+.contenedorCentro input[type="text"],
+.contenedorCentro select,
+input[type="date"],
+textarea {
+  background-color: white;
+  border-radius: 15px;
+  height: 63px;
+  width: 400px;
+}
+input[type="text"],
+input[type="date"] {
+  color: black;
+}
+input[type="date"]:valid {
+  background-color: #aff9fe;
+}
+
+textarea {
+  height: 400px;
+  resize: none;
+  width: 400px;
+}
+
+.contenedorCentro {
+  align-self: center;
+  display: flex;
+  height: 800px;
+  justify-content: space-between;
+  width: 880px;
+}
+
+.bloqueDerecho {
+  width: 450px;
+}
+
+.bloquePoderes span:hover {
+  background-color: white;
+  color: black;
+  text-decoration: underline;
+}
+
+.bloqueDerecho label {
+  color: white;
+  font-size: 20px;
+}
+.bloqueEspecies {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+}
+
+.bloqueFoto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 40px;
+}
+.bloqueFoto input {
+  width: 400px;
+}
+
+.bloquePoderes input {
+  accent-color: #aff9fe;
+  height: 20px;
+  width: 20px;
+}
+
+.bloquePoderes {
+  height: fit-content;
+  position: relative;
+  top: 40px;
+}
+.bloquePoderes label:first-child {
+  font-size: 20px;
+}
+.bloquePoderes label {
+  font-size: 20px;
+  left: 20px;
+  position: relative;
+}
+.bloqueTiposDePersonaje input {
+  width: 20px;
+  height: 20px;
+}
+.bloqueBoton {
+  bottom: 80px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.bloqueBoton input {
+  background-color: #1cd1b0;
+  border-radius: 23px;
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+  height: 87px;
+  width: 466px;
+}
+.bloqueBoton input:hover {
+  background-color: #001d2d;
+  color: white;
+}
+
+/* Footer */
+
+footer {
+  align-items: center;
+  background-color: #00669f;
+  color: #fff9f9;
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+}
+
+h3 {
+  padding-left: 20px;
+}
+.imagenFooter {
+  height: 68px;
+  width: 248px;
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) and (min-width: 531px) {
+  /* HTML Y BODY */
+  html,
+  body,
+  .contenedorCartas {
+    flex-wrap: wrap;
+    height: 150vh;
+    width: 100vw;
+  }
+
+  /* BODY */
+
+  .ayuda {
+    position: fixed;
+    top: 980px;
+  }
+
+  .ayuda1 {
+    height: 60px;
+    width: 60px;
+  }
+
+  .contenedorCartas,
+  .ayuda {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+
+  .carta,
+  .espaciador {
+    position: relative;
+    width: 265px;
+  }
+
+  .contenedorCorazon,
+  .descripcion {
+    width: 20%;
+  }
+
+  .descripcion p {
+    font-size: 80%;
+  }
+  .descripcion {
+    width: 36vw;
+  }
+  .imgRedonda {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    position: absolute;
+    top: 105px;
+    width: 100px;
+  }
+  .imagen-top {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 155px;
+    width: 266px;
+  }
+
+  /* FOOTER */
+
+  .imagenFooter {
+    background-image: url(../img/GitHub.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 25px;
+    width: 130px;
+  }
+
+  footer {
+    font-size: 50%;
+    height: 50px;
+  }
+  .imagenFooter {
+    position: relative;
+    right: 10px;
+  }
+}
+
+/* CELULARES */
+
+@media screen and (max-width: 530px) {
+  * {
+    font-size: 105%;
+  }
+
+  /* HTML */
+
+  html {
+    width: 100%;
+  }
+
+  /* BODY */
+
+  .ayuda1 {
+    font-size: 34px;
+    height: 40px;
+    width: 40px;
+  }
+  .ayuda {
+    position: fixed;
+    top: 500px;
+    width: 100%;
+  }
+
+  .carta {
+    height: 55vh;
+    margin-top: 40px;
+    width: 65vw;
+  }
+  .contenedorCartas {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .cartaCuatro {
+    display: none;
+  }
+  .descripcion {
+    height: 10vh;
+    width: 55vw;
+  }
+
+  .imgRedonda {
+    position: absolute;
+    top: 110px;
+  }
+
+  .imagen-top {
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    background-size: cover;
+    width: 65vw;
+  }
+
+  p {
+    font-size: 40%;
+  }
+
+  input {
+    height: 5vh;
+    width: 30vw;
+  }
+
+  /* FOOTER */
+
+  footer {
+    align-items: center;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 65px;
+    position: sticky;
+  }
+  .imagenFooter {
+    background-image: url(../img/GitHub.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 25px;
+    width: 120px;
+  }
+}

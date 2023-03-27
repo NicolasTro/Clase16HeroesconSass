@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>HEROES</title>
+</head>
+
+<body>
+    <header class="tituloDescuentos">
+        <h2 class="Descuentos"> <span class="descuentosSpan">Descuentos 20% en todos los productos!</span></h2>
+    </header>
+
+    <main>
+
+        <div class="tituloFondo">
+            <h1 class="contenedor-titulo"> <img src="img/Rectangle.png" alt=""> <span class="contenedor-titulo1"> Nombre
+                    Tienda </span></h1>
+
+        </div>
+        <div class="tituloTres">
+            <ul>
+                <li>Contacto</li>
+                <li>Registrarme</li>
+                <li>Ingresar</li>
+            </ul>
+
+        </div>
+
+
+        <div class="contenedorPrincipal">
+
+
+            <input type="checkbox" id="segundaPagina"></input>
+
+            <div class="ayuda">
+
+
+
+                <label for="segundaPagina" class="etiquetaSegundaPagina">+</label>
+
+            </div>
+
+
+            <section class="contenedorCartas ">
+
+                <section class="carta">
+
+                    <div class="imagen-top tUno">
+
+                        <div class="contenedorCorazon">
+                            <img src="img/Corazon.png" alt="me gusta">
+                        </div>
+                        <div class="imgRedonda rUno"></div>
+
+                    </div>
+
+
+                    <div class="espaciador"></div>
+
+                    <section class="bloqueContenido">
+
+                        <div class="alineacionTexto">
+                            <h2 class="tituloImg">BATMAN</h2>
+                        </div>
+                        <div class="descripcion">
+
+                            <p>Batman (conocido inicialmente como Bat-Man) es un personaje creado por los
+                                estadounidenses
+                                Bob Kane y Bill Finger, y propiedad de DC Comics. Apareció por primera vez en la
+                                historia
+                                titulada «El caso del sindicato químico» de la revista Detective Comics N.º 27, lanzada
+                                por
+                                la editorial National Publications el 30/3/1939.
+                            </p>
+                        </div>
+                        <input class="boton1" type="button" value="Ver mas">
+                    </section>
+
+                </section>
+
+                <section class="carta">
+
+                    <div class="imagen-top tDos">
+                        <div class="contenedorCorazon"><img src="img/Corazon.png" alt="me gusta"></div>
+                        <div class="imgRedonda rDos"></div>
+                    </div>
+                    <div class="espaciador"></div>
+                    <section class="bloqueContenido">
+
+                        <div class="alineacionTexto">
+                            <h2 class="tituloImg">MUJER MARAVILLA</h2>
+                        </div>
+                        <div class="descripcion">
+
+                            <p>Es una superheroína creada por William Moulton Marston para la editorial DC Comics. Es
+                                una
+                                princesa guerrera de las Amazonas, pueblo ficticio basado en el de las amazonas de la
+                                mitología griega. En su tierra natal es conocida como la princesa Diana de Temiscira
+                                pero
+                                fuera de esta utiliza la identidad secreta de Diana Prince.
+                            </p>
+                        </div>
+                        <input class="boton1" type="button" value="Ver mas">
+                    </section>
+
+                </section>
+
+                <section class="carta">
+
+                    <div class="imagen-top tTres">
+                        <div class="contenedorCorazon"><img src="img/Corazon.png" alt="me gusta"></div>
+                        <div class="imgRedonda rTres"></div>
+                    </div>
+                    <div class="espaciador">
+
+                    </div>
+
+                    <section class="bloqueContenido">
+
+                        <div class="alineacionTexto">
+                            <h2 class="tituloImg">SUPERMAN</h2>
+                        </div>
+                        <div class="descripcion">
+
+                            <p>Es un superhéroe que apareció por primera vez en los cómics estadounidenses publicados
+                                por DC
+                                Comics. ​
+                                El personaje fue creado por el escritor estadounidense Jerry Siegel y el artista
+                                canadiense
+                                Joe Shuster en 1933 cuando ambos se encontraban viviendo en Cleveland, Ohio.
+                            </p>
+                        </div>
+                        <input class="boton1" type="button" value="Ver mas">
+                    </section>
+
+                </section>
+
+
+            </section>
+
+
+
+            <section class="contenedorAgregar">
+
+                <form action="index.html">
+
+                    <div class="contenedorAux">
+
+                        <div class="tituloContenedor">
+
+                            <h2>Añadir tu super!</h2>
+                            <h3>Agrega tu personaje favorito complementando las opciones</h3>
+                        </div>
+
+                        <div class="contenedorCentro">
+
+
+
+                            <div class="bloqueIzquierdo">
+
+                                <label for="nombre" class="nombre">*Nombre</label>
+                                <input class="campoIntroductorio" type="text" name="nombre" id="nombre"
+                                    placeholder="Nombre super" minlength="5" maxlength="8" required>
+                                <div class="bloqueFecha">
+
+                                    <label for="fecha">Fecha</label>
+                                    <input class="campoIntroductorio" type="date" name="fecha" id="fecha"
+                                        placeholder="dd/mm/aaaa" patter="dd/mm/aaaa" required>
+                                </div>
+
+                                <div class="bloqueTextArea">
+
+                                    <textarea name="descr" cols="60" rows="26"></textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="bloqueDerecho">
+                                <div class="bloqueEspecies">
+
+                                    <label for="">*Especie</label>
+                                    <select class="campoIntroductorio" name="" id="">
+                                        <option value="">Humano</option>
+                                        <option value="">Kriptoniano</option>
+                                        <option value="">Amazona</option>
+                                    </select>
+                                </div>
+                                <div class="bloqueFoto">
+
+                                    <label for="">Agregar Foto</label>
+                                    <br>
+                                    <input type="file" name="" multiple accept=".pdf, .jpg, .png">
+                                </div>
+                                <div class="bloquePoderes">
+
+                                    <label for="titulo"><span>Poderes</span>
+                                    </label>
+                                    <br>
+                                    <label for="volar"><input type="checkbox" name=" poderes" id="volar">
+                                        <span class="seleccion">Volar</span></label>
+                                    <br>
+
+                                    <label for="Superinteligencia"><input type="checkbox" name="poderes"
+                                            id="Superinteligencia">
+                                        <span class="seleccion">Superinteligencia</span></label>
+                                    <br>
+                                    <label for="vistaDeRayo"><input type="checkbox" name="poderes" id="vistaDeRayo">
+                                        <span class="seleccion">Vista
+                                            de rayo
+                                            laser</span></label><br>
+                                    <label for="billeteraGorda"><input type="checkbox" name="poderes"
+                                            id="billeteraGorda">
+                                        <span class="seleccion">Billetera
+                                            gorda</span></label><br>
+                                </div>
+                                <div>
+
+                                </div>
+                                <br>
+                                <br>
+                                <hr>
+                                <br>
+                                <div class="bloqueTiposDePersonaje">
+                                    <label for="">Tipos de personaje</label>
+                                    <br>
+
+                                    <label for="heroe"><input type="radio" name="tiposDePersonaje" id="heroe" checked>
+                                        <span>Heroe /
+                                            Heroina</span></label>
+                                    <br>
+                                    <label for="villano"><input type="radio" id="villano" name="tiposDePersonaje">
+                                        <span>Villano /
+                                            Villana</span></label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="bloqueBoton"><input type="submit" value="Añadir"></div>
+                    </div>
+                </form>
+            </section>
+
+
+        </div>
+
+
+
+
+    </main>
+
+    <footer>
+        <section class="textoFooter">
+            <h3>Todos los derechos reservados a FRONT END 1</h3>
+        </section>
+
+        <section class="imagenFooter">
+        </section>
+
+
+    </footer>
+</body>
+
+</html>
