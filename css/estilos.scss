@@ -1,0 +1,805 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Roboto&display=swap");
+@import "mixins/_mixins.scss";
+@import "Partials/_variables.scss";
+
+$tipoDisplay: flex;
+
+* {
+  @include funcionGenerica;
+}
+
+/* HTML */
+main {
+  height: 1600px;
+}
+html {
+  @include tamanio(1600px, none);
+  width: 1800px;
+  margin: 0 auto;
+}
+
+/*  HEADER */
+
+.descuentosSpan {
+  @include posicionamiento(relative, none, none, 20px, none);
+}
+
+.tituloDescuentos {
+  h2,
+  span {
+    z-index: 2;
+  }
+
+  .tituloFondo {
+    z-index: 2;
+    h1 {
+      z-index: 2;
+    }
+  }
+}
+
+header {
+  background-color: #1cd1b0;
+}
+
+h1 {
+  @include alineacionFlex(flex, flex-start, center);
+  @include tamanio(none, 101px);
+  position: sticky;
+}
+
+.tituloTres {
+  background-color: $colorTitulo3;
+  box-shadow: 1px 10px 5px #4b4b4b;
+  color: $colorFondo;
+  @include posicionamiento(sticky, 100px, none, none, none);
+  z-index: 2;
+  li {
+    @include alineacionFlex(flex, flex-start, center);
+    @include tamanio(none, 40px);
+    margin: 0 20px;
+  }
+  ul {
+    @include alineacionFlex(flex, flex-end, center);
+    list-style: none;
+  }
+}
+
+.tituloFondo {
+  background-color: $tituloColorFondo;
+  color: $colorFondo;
+  height: 101px;
+  position: sticky;
+  top: 0px;
+}
+
+/* BODY */
+
+a:link {
+  text-decoration: none;
+}
+
+.tituloFondo,
+.ayuda1 {
+  &:hover {
+    transition: all 0.5s;
+  }
+}
+
+.contenedorCartas {
+  @include alineacionFlex(flex, space-around, center);
+  @include posicionamiento(relative, none, 110px, none, none);
+  @include tamanio(none, 1200px);
+}
+
+input:checked ~ .contenedorAux {
+  opacity: 100%;
+  display: block;
+}
+
+.ayuda {
+  @include tamanio(70px, 70px);
+  @include posicionamiento(sticky, 1250px, none, 2750px, none);
+  z-index: 1;
+}
+
+.etiquetaSegundaPagina {
+  @include alineacionFlex(flex, center, center);
+  @include tamanio(70px, 70px);
+  background-color: $tituloColorFondo;
+  border-radius: 100%;
+  color: #fff9f9;
+  font-size: 60px;
+  z-index: 1;
+  &:hover {
+    background-color: $colorTitulo3;
+    color: $colorFondo;
+  }
+}
+
+.contenedorAgregar {
+  @include posicionamiento(relative, -1200px, none, none, none);
+  @include tamanio(none, 70vh);
+  display: none;
+  opacity: 0%;
+}
+
+form {
+  @include alineacionFlex(flex, center, center);
+}
+
+.carta {
+  @include alineacionFlex(flex, center, center);
+  background-color: $colorAlternativo;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 1px 10px 5px #4b4b4b;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    transition: all 1s;
+    transform: scale(1.2);
+  }
+}
+
+.imgRedonda:hover {
+  transition: all 1s;
+  transform: scale(1.5);
+}
+
+#menuHamburguesa {
+  visibility: hidden;
+}
+@keyframes vueltaPaginaCartas {
+  100% {
+    opacity: 0%;
+    transform: rotateY(180deg);
+    transform-origin: left;
+    translate: -1000px;
+  }
+}
+
+@keyframes vueltaPaginaAgregar {
+  100% {
+    opacity: 100%;
+  }
+}
+
+#segundaPagina {
+  visibility: hidden;
+  &:checked ~ .contenedorCartas {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: vueltaPaginaCartas;
+    transition: all $tiempoDeTransition-lenta;
+  }
+  &:checked ~ .contenedorAgregar {
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-name: vueltaPaginaAgregar;
+    display: flex;
+    transition: all $tiempoDeTransition-lenta;
+  }
+}
+
+.contenedorPrincipal {
+  height: 1350px;
+}
+
+.tituloDescuentos,
+.tituloFondo {
+  z-index: 4;
+}
+
+.boton1:hover {
+  background-color: $colorTitulo3;
+  color: $colorFondo;
+}
+
+.contenedorCorazon {
+  @include posicionamiento(relative, 10px, none, 20px, none);
+  @include tamanio(50px, none);
+  animation: corazon $tiempoDeTransition-intermedio infinite;
+}
+
+@keyframes corazon {
+  0% {
+    opacity: 0%;
+  }
+  20% {
+    transform: scale(1.04);
+    opacity: 100%;
+  }
+  100% {
+    /*   transform: rotate(-50deg); */
+    opacity: 0%;
+  }
+}
+
+.contenedorCartas {
+  @include alineacionFlex(flex, space-around, center);
+  @include posicionamiento(relative, none, 110px, none, none);
+  @include tamanio(none, 1200px);
+}
+
+.espaciador {
+  @include tamanio(none, 90px);
+}
+
+.bloqueContenido {
+  @include alineacionFlex(flex, center, center);
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.imagen-top {
+  @include tamanio(350px, 200px);
+  border: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tUno,
+.tDos,
+.tTres,
+.tCuatro,
+.rCuatro {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tUno {
+  background-image: url(../img/Batman1.png);
+}
+
+.rUno {
+  background-image: url(../img/Bat1.png);
+}
+.tDos {
+  background-image: url(../img/Fondo\ Maravilla.png);
+}
+
+.rDos {
+  background-image: url(../img/Mujer\ maravilla.png);
+}
+
+.tTres {
+  background-image: url(../img/Fondo\ superman.png);
+}
+
+.rTres {
+  background-image: url(../img/Foto\ superman.png);
+}
+
+.tCuatro {
+  background-image: url(../img/Harley.png);
+}
+
+.rCuatro {
+  background-image: url(../img/Har1.png);
+}
+
+.imgRedonda {
+  @include posicionamiento(absolute, 140px, none, none, none);
+  @include tamanio(120px, 118px);
+  align-self: center;
+  background-size: contain;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.tituloImg {
+  text-align: center;
+}
+.descripcion {
+  @include posicionamiento(relative, 10px, none, none, none);
+  @include tamanio(320px, 200px);
+}
+
+input:not([type="file"]) {
+  @include tamanio(128.78px, 48.52px);
+  background-color: $tituloColorFondo;
+  color: $colorAlternativo;
+  margin: 20px;
+}
+
+/* PAGINA AGREGAR*/
+
+.tituloContenedor {
+  h2,
+  h3 {
+    color: $colorFondo;
+    text-align: center;
+  }
+  h2 {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
+
+.contenedorAgregar {
+  @include alineacionFlex(none, none, center);
+  flex-direction: column;
+}
+
+.contenedorAux {
+  @include tamanio(1200px, 1050px);
+  background-color: $tituloColorFondo;
+  border-radius: 49px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.bloqueIzquierdo {
+  @include alineacionFlex(flex, none, center);
+  @include tamanio(400px, 750px);
+  flex-direction: column;
+}
+
+.bloqueFecha {
+  @include alineacionFlex(flex, center, none);
+  @include tamanio(400px, none);
+  flex-direction: column;
+}
+
+.bloqueFecha input {
+  @include posicionamiento(relative, none, none, none, 20px);
+}
+
+.nombre {
+  @include tamanio(100%, none);
+}
+.bloqueIzquierdo input[type="text"]:valid {
+  background-color: #aff9fe;
+}
+
+.bloqueIzquierdo label {
+  color: $colorFondo;
+  font-size: 20px;
+}
+.contenedorCentro input[type="text"],
+.contenedorCentro select,
+input[type="date"],
+textarea {
+  @include tamanio(100%, 63px);
+  background-color: $colorFondo;
+  border-radius: 15px;
+}
+
+input[type="text"],
+input[type="date"] {
+  color: black;
+}
+input[type="date"]:valid {
+  background-color: #aff9fe;
+}
+
+textarea {
+  @include tamanio(400px, 400px);
+  resize: none;
+}
+
+.contenedorCentro {
+  @include alineacionFlex(flex, center, center);
+  @include tamanio(none, 800px);
+  gap: 20px;
+}
+
+.bloqueDerecho {
+  flex-direction: column;
+  @include alineacionFlex(flex, none, center);
+  @include tamanio(400px, none);
+  @include posicionamiento(relative, -66px, none, none, none);
+  label {
+    color: $colorFondo;
+    font-size: 20px;
+  }
+}
+
+.bloquePoderes {
+  @include tamanio(400px, fit-content);
+  @include posicionamiento(relative, 40px, none, none, none);
+  label {
+    font-size: 20px;
+    @include posicionamiento(relative, none, none, 20px, none);
+  }
+  label:first-child {
+    font-size: 20px;
+  }
+  input {
+    accent-color: #aff9fe;
+    @include tamanio(20px, 20px);
+  }
+  span:hover {
+    background-color: $colorFondo;
+    color: $colorTexto;
+    text-decoration: underline;
+  }
+}
+
+.bloqueEspecies {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+  width: 400px;
+}
+
+.bloqueFoto {
+  @include alineacionFlex(flex, center, none);
+  @include posicionamiento(relative, 40px, none, none, none);
+  @include tamanio(400px, none);
+  flex-direction: column;
+  input {
+    width: 400px;
+  }
+}
+
+.bloqueTiposDePersonaje {
+  @include tamanio(400px, none);
+  input {
+    @include tamanio(20px, 20px);
+  }
+  label {
+    margin-left: 20px;
+  }
+}
+
+.bloqueBoton {
+  @include alineacionFlex(flex, center, none);
+  input {
+    @include tamanio(466px, 87px);
+    background-color: #1cd1b0;
+    border-radius: 23px;
+    color: $colorTexto;
+    font-size: 40px;
+    font-weight: 700;
+    &:hover {
+      background-color: #001d2d;
+      color: white;
+    }
+  }
+}
+
+/* FOOTER */
+
+footer {
+  align-items: center;
+  background-color: #00669f;
+  color: #fff9f9;
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  z-index: 2;
+  h3 {
+    padding-left: 20px;
+  }
+}
+.imagenFooter {
+  @include tamanio(248px, 68px);
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) and (min-width: 542px) {
+  /* HTML Y BODY */
+  main {
+    @include tamanio(none, 2120px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  html,
+  body,
+  .contenedorCartas {
+    flex-wrap: wrap;
+    @include tamanio(100vw, 1400px);
+  }
+
+  /* BODY */
+
+  .ayuda {
+    @include posicionamiento(sticky, 878px, none, none, none);
+    z-index: 3;
+  }
+
+  .etiquetaSegundaPagina {
+    position: sticky;
+    @include tamanio(50px, 50px);
+    font-size: 40px;
+  }
+
+  #segundaPagina {
+    &:checked ~ .etiquetaSegundaPagina {
+      background-color: $colorFondo;
+      color: $tituloColorFondo;
+    }
+    &:checked ~ .segundaPagina {
+      background-color: $colorFondo;
+      color: $tituloColorFondo;
+    }
+  }
+
+  .contenedorCartas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include tamanio(100vw, none);
+  }
+
+  .contenedorPrincipal {
+    @include tamanio(none, 1400px);
+  }
+
+  .carta,
+  .espaciador {
+    position: relative;
+    @include tamanio(265px, none);
+  }
+
+  .contenedorCorazon {
+    @include tamanio(20%, none);
+  }
+
+  .descripcion {
+    @include tamanio(36vw, none);
+    p {
+      font-size: 80%;
+    }
+  }
+
+  .imgRedonda {
+    @include posicionamiento(absolute, 105px, none, none, none);
+    @include tamanio(100px, 100px);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .imagen-top {
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include tamanio(266px, 155px);
+  }
+
+  /* SEGUNDA PAGINA */
+
+  .contenedorCentro {
+    @include alineacionFlex(flex, center, center);
+    @include tamanio(95vw, none);
+    flex-direction: column;
+  }
+
+  .contenedorAux {
+    @include tamanio(95vw, 1750px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .contenedorAgregar {
+    @include alineacionFlex(flex, center, center);
+    flex-direction: column;
+    @include tamanio(95vw, 1200px);
+    margin-left: 10px;
+    @include posicionamiento(relative, -1234px, none, none, none);
+    display: none;
+  }
+
+  .tituloContenedor {
+    @include posicionamiento(relative, 23px, none, none, none);
+    h2 {
+      font-size: 220%;
+    }
+    h3 {
+      font-size: 114%;
+    }
+  }
+
+  .contenedorCentro {
+    @include alineacionFlex(flex, space-between, center);
+    @include tamanio(none, 2000px);
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* 3 */
+  .bloqueIzquierdo {
+    @include posicionamiento(relative, 53px, none, none, none);
+  }
+
+  .bloqueDerecho {
+    @include posicionamiento(relative, -87px, none, none, none);
+  }
+
+  /* FOOTER */
+
+  .imagenFooter {
+    background-image: url(../img/GitHub.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include tamanio(130px, 25px);
+    @include posicionamiento(relative, none, none, none, 10px);
+  }
+
+  footer {
+    font-size: 50%;
+    height: 50px;
+  }
+}
+
+/* CELULARES */
+
+@media (max-width: 541px) {
+  * {
+    font-size: 105%;
+  }
+
+  /* HTML */
+
+  html {
+    @include tamanio(100%, 2600px);
+  }
+
+  body {
+    @include tamanio(100%, 1600px);
+  }
+
+  main {
+    @include tamanio(100%, 2200px);
+  }
+
+  #menuHamburguesa {
+    @include tamanio(10px, 10px);
+  }
+
+  /* BODY */
+
+  .etiquetaSegundaPagina {
+    @include tamanio(35px, 35px);
+    font-size: 35px;
+  }
+
+  .ayuda {
+    @include alineacionFlex(flex, flex-end, none);
+    @include posicionamiento(sticky, 500px, none, none, 6600px);
+    @include tamanio(50px, none);
+  }
+
+  .contenedorPrincipal {
+    @include tamanio(none, 1900px);
+  }
+
+  .carta {
+    @include tamanio(65vw, 55vh);
+    margin-top: 40px;
+  }
+
+  .contenedorCartas {
+    @include alineacionFlex(flex, space-around, none);
+    @include tamanio(none, fit-content);
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .cartaCuatro {
+    display: none;
+  }
+
+  .descripcion {
+    @include tamanio(55vw, 10vh);
+  }
+
+  .imgRedonda {
+    @include posicionamiento(absolute, 110px, none, none, none);
+  }
+
+  .imagen-top {
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    background-size: cover;
+    width: 65vw;
+  }
+
+  p {
+    font-size: 40%;
+  }
+
+  .bloqueIzquierdo {
+    @include posicionamiento(relative, 20px, none, none, none);
+    @include tamanio(90%, none);
+    input[type="file"] {
+      @include tamanio(95%, 40px);
+      font-size: 10px;
+    }
+  }
+
+  .bloqueFecha {
+    width: 100%;
+  }
+  /* SEGUNDA PAGINA */
+
+  .contenedorAgregar {
+    @include posicionamiento(relative, -1550px, none, none, none);
+    @include tamanio(80vw, 1500px);
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+  }
+
+  .contenedorAux {
+    @include tamanio(80vw, 1514px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bloqueBoton input {
+    height: 50px;
+    font-size: 25px;
+  }
+
+  form {
+    height: 1500px;
+  }
+
+  .tituloContenedor {
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+  }
+
+  .contenedorCentro {
+    @include alineacionFlex(flex, none, center);
+    @include posicionamiento(relative, 272px, none, none, none);
+    @include tamanio(80vw, none);
+    flex-direction: column;
+  }
+
+  .bloqueDerecho {
+    @include posicionamiento(relative, 6px, none, none, none);
+  }
+
+  .bloqueDerecho,
+  .bloquePoderes,
+  .bloqueTiposDePersonaje,
+  .bloqueEspecies,
+  .bloqueFoto,
+  .bloqueFoto Input {
+    width: 95%;
+  }
+
+  .bloqueTiposDePersonaje {
+    @include posicionamiento(relative, -45px, none, none, none);
+  }
+  .bloqueBoton {
+    @include posicionamiento(relative, 525px, none, none, none);
+  }
+  textArea {
+    width: 100%;
+  }
+
+  /* FOOTER */
+
+  footer {
+    @include alineacionFlex(flex, none, center);
+    flex-direction: column;
+    @include posicionamiento(fixed, none, 0px, none, none);
+    @include tamanio(100vw, 65px);
+  }
+
+  .textoFooter {
+    width: 100vw;
+  }
+
+  .imagenFooter {
+    background-image: url(../img/GitHub.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include tamanio(120px, 25px);
+  }
+}

@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML */
+html {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+/*  HEADER */
+.contenedor-titulo1 {
+  left: 20px;
+  top: 0px;
+}
+
+.descuentosSpan {
+  left: 20px;
+  position: relative;
+}
+
+.tituloDescuentos h2,
+.tituloDescuentos span {
+  z-index: 2;
+}
+.tituloDescuentos .tituloFondo {
+  z-index: 2;
+}
+.tituloDescuentos .tituloFondo h1 {
+  z-index: 2;
+}
+
+header {
+  background-color: #1cd1b0;
+}
+
+h1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 101px;
+  position: sticky;
+  top: 0px;
+}
+
+.tituloTres {
+  background-color: #001d2d;
+  box-shadow: 1px 10px 5px #4b4b4b;
+  color: white;
+  position: sticky;
+  top: 100px;
+  z-index: 2;
+}
+.tituloTres li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40px;
+  margin: 0 20px;
+}
+.tituloTres ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.tituloFondo {
+  background-color: #00669f;
+  color: white;
+  height: 101px;
+  position: sticky;
+  top: 0px;
+}
+
+/* BODY */
+a:link {
+  text-decoration: none;
+}
+
+.tituloFondo :hover,
+.ayuda1 :hover {
+  transition: all 0.5s;
+}
+
+.contenedorCartas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  bottom: 110px;
+  height: 1200px;
+}
+
+input:checked ~ .contenedorAux {
+  opacity: 100%;
+}
+
+.ayuda {
+  height: 70px;
+  left: 1400px;
+  position: sticky;
+  top: 1200px;
+  width: 70px;
+  z-index: 1;
+}
+
+.etiquetaSegundaPagina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00669f;
+  border-radius: 100%;
+  color: #fff9f9;
+  font-size: 60px;
+  height: 70px;
+  width: 70px;
+  z-index: 1;
+}
+.etiquetaSegundaPagina :hover {
+  background-color: #001d2d;
+  color: white;
+}
+
+.contenedorAgregar {
+  opacity: 0%;
+  height: 1px;
+  bottom: 1200px;
+  position: relative;
+}
+
+.carta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: #f3f3f3;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 1px 10px 5px #4b4b4b;
+  flex-direction: column;
+  position: relative;
+}
+.carta :hover {
+  transition: all 1s;
+  transform: scale(1.2);
+}
+
+.imgRedonda:hover {
+  transition: all 1s;
+  transform: scale(2);
+}
+
+#menuHamburguesa {
+  visibility: hidden;
+}
+
+#segundaPagina {
+  visibility: hidden;
+}
+#segundaPagina :checked ~ .contenedorCartas {
+  transform: translateX(-1500px);
+  transition: all 0.5s;
+}
+#segundaPagina :checked ~ .contenedorAgregar {
+  opacity: 100%;
+  transform: translateX(1500px);
+  transition: all 2.5s;
+}
+
+.contenedorAgregar {
+  position: relative;
+  right: 1500px;
+}
+
+.boton1:hover {
+  background-color: #001d2d;
+  color: white;
+}
+
+.contenedorCorazon {
+  left: 20px;
+  position: relative;
+  top: 10px;
+  animation: corazon 2s infinite;
+}
+
+@keyframes corazon {
+  0% {
+    opacity: 0%;
+  }
+  20% {
+    transform: scale(1.04);
+    opacity: 100%;
+  }
+  100% {
+    /*   transform: rotate(-50deg); */
+    opacity: 0%;
+  }
+}
+.contenedorCartas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  bottom: 110px;
+  height: 1200px;
+}
+
+.espaciador {
+  height: 90px;
+  width: 330px;
+}
+
+.bloqueContenido {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.imagen-top {
+  border: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 350px;
+}

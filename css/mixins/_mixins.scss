@@ -1,0 +1,30 @@
+@mixin funcionGenerica{
+    box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* border: solid black 3px; */
+}
+
+
+@mixin alineacionFlex($tDisplay, $alineacionEjeX, $alineacionEjeY) {
+  display: $tDisplay;
+  justify-content: $alineacionEjeX;
+  align-items: $alineacionEjeY;
+}
+
+
+@mixin tamanio($ancho, $alto) {
+  height: $alto;
+  width: $ancho;
+}
+
+@mixin posicionamiento($tipoPosicion, $top, $bottom, $left, $right) {
+  position: $tipoPosicion;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+
